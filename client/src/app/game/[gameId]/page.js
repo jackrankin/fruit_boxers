@@ -5,20 +5,26 @@ import { useEffect, useState } from "react";
 import FruitBoxBoard from "../../components/FruitBoxBoard";
 
 export default function GamePage({ params }) {
+  const cols = 45;
+  const rows = 14;
+  const tileSize = 45;
+
   const { gameId } = useParams();
   const [gameUrl, setGameUrl] = useState("");
   const [isCopied, setIsCopied] = useState(false);
   const [started, setStarted] = useState(false);
-  const [board, setBoard] = useState(null);
+  const [board, setBoard] = useState(() => {
+    const initialBoard = new Array(rows);
+    for (let i = 0; i < rows; i++) {
+      initialBoard[i] = new Array(cols).fill(0);
+    }
+    return initialBoard;
+  });
   const [isDragging, setIsDragging] = useState(false);
   const [startPos, setStartPos] = useState(null);
   const [currentPos, setCurrentPos] = useState(null);
   const [selectedTiles, setSelectedTiles] = useState(new Set());
   const [tempSelectedTiles, setTempSelectedTiles] = useState(new Set());
-
-  const cols = 70;
-  const rows = 15;
-  const tileSize = 50;
 
   useEffect(() => {
     if (gameId) {
@@ -34,12 +40,10 @@ export default function GamePage({ params }) {
   };
 
   useEffect(() => {
-    const newBoard = Array.from({ length: rows }, () =>
-      Array.from({ length: cols }, () =>
-        Math.random() > 0.7 ? Math.floor(Math.random() * 9) + 1 : 0
-      )
+    const filledBoard = board.map((row) =>
+      row.map(() => (Math.random() > 0.7 ? (Math.random() * 9 + 1) | 0 : 0))
     );
-    setBoard(newBoard);
+    setBoard(filledBoard);
   }, []);
 
   const handleMouseDown = (e) => {

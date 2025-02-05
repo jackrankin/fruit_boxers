@@ -24,7 +24,9 @@ export default function FruitBoxBoard({ params }) {
   const cols = 17;
 
   useEffect(() => {
-    const socket = new WebSocket(`ws://localhost:8080/ws/${params.gameId}`);
+    const socket = new WebSocket(
+      `wss://fruit-boxers-793785472269.us-central1.run.app/ws/${params.gameId}`
+    );
     socket.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (data.type === "player_joined") {

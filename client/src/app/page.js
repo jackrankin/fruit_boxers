@@ -4,24 +4,28 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();
-  const cols = 70;
-  const rows = 15;
-  const tileSize = 50;
+  const cols = 45;
+  const rows = 14;
+  const tileSize = 45;
 
-  const [board, setBoard] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startPos, setStartPos] = useState(null);
   const [currentPos, setCurrentPos] = useState(null);
   const [selectedTiles, setSelectedTiles] = useState(new Set());
   const [tempSelectedTiles, setTempSelectedTiles] = useState(new Set());
+  const [board, setBoard] = useState(() => {
+    const initialBoard = new Array(rows);
+    for (let i = 0; i < rows; i++) {
+      initialBoard[i] = new Array(cols).fill(0);
+    }
+    return initialBoard;
+  });
 
   useEffect(() => {
-    const newBoard = Array.from({ length: rows }, () =>
-      Array.from({ length: cols }, () =>
-        Math.random() > 0.7 ? Math.floor(Math.random() * 9) + 1 : 0
-      )
+    const filledBoard = board.map((row) =>
+      row.map(() => (Math.random() > 0.7 ? (Math.random() * 9 + 1) | 0 : 0))
     );
-    setBoard(newBoard);
+    setBoard(filledBoard);
   }, []);
 
   const handleMouseDown = (e) => {
