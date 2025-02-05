@@ -1,0 +1,324 @@
+[debug] [2025-02-05T01:49:38.586Z] ----------------------------------------------------------------------
+[debug] [2025-02-05T01:49:38.588Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2025-02-05T01:49:38.588Z] CLI Version:   13.30.0
+[debug] [2025-02-05T01:49:38.588Z] Platform:      darwin
+[debug] [2025-02-05T01:49:38.588Z] Node Version:  v20.11.1
+[debug] [2025-02-05T01:49:38.588Z] Time:          Tue Feb 04 2025 19:49:38 GMT-0600 (Central Standard Time)
+[debug] [2025-02-05T01:49:38.588Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-05T01:49:38.661Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-05T01:49:38.661Z] > authorizing via signed-in user (jackjrankin@gmail.com)
+[debug] [2025-02-05T01:49:38.662Z] [iam] checking project fruit-boxers for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-02-05T01:49:38.662Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:38.662Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:38.662Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions [none]
+[debug] [2025-02-05T01:49:38.662Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions x-goog-quota-user=projects/fruit-boxers
+[debug] [2025-02-05T01:49:38.662Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-02-05T01:49:38.835Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions 200
+[debug] [2025-02-05T01:49:38.835Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-02-05T01:49:38.836Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:38.836Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:38.836Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fruit-boxers [none]
+[debug] [2025-02-05T01:49:40.072Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fruit-boxers 200
+[debug] [2025-02-05T01:49:40.073Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fruit-boxers {"projectId":"fruit-boxers","projectNumber":"987758189493","displayName":"fruitboxers","name":"projects/fruit-boxers","resources":{"hostingSite":"fruit-boxers"},"state":"ACTIVE","etag":"1_f2c0104c-9de6-4b4a-9fad-ad580c878dd1"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-02-05T01:49:41.665Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:41.665Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:41.665Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/fruit-boxers/sites/fruit-boxers [none]
+[debug] [2025-02-05T01:49:41.996Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/fruit-boxers/sites/fruit-boxers 200
+[debug] [2025-02-05T01:49:41.996Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/fruit-boxers/sites/fruit-boxers {"name":"projects/fruit-boxers/sites/fruit-boxers","defaultUrl":"https://fruit-boxers.web.app","appId":"1:987758189493:web:85fbbd91c6f3f9d8dc97fc","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.1.6
+
+[info]    - Environments: .env
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info]  ⨯ ESLint: Cannot serialize key "parse" in parser: Function values are not supported.
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/5) ...
+
+[info]    Generating static pages (1/5) 
+
+[info]    Generating static pages (2/5) 
+   Generating static pages (3/5) 
+ ✓ Generating static pages (5/5)
+
+[info]    Finalizing page optimization ...
+
+[info]    Collecting build traces ...
+
+[info] 
+
+[info] Route (app)                              Size     First Load JS
+┌ ○ /                                    1.45 kB         107 kB
+├ ○ /_not-found                          979 B           106 kB
+└ ƒ /game/[gameId]                       6.71 kB         112 kB
++ First Load JS shared by all            105 kB
+  ├ chunks/4bd1b696-dc53661a9e7a1ea0.js  52.9 kB
+  ├ chunks/517-d84ec1144c8bba3e.js       50.5 kB
+  └ other shared chunks (total)          1.91 kB
+
+
+[info] 
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • non-static component /game/[gameId]/page
+[info] 
+[debug] [2025-02-05T01:49:48.618Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:48.619Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:48.619Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/fruit-boxers/sites/fruit-boxers [none]
+[debug] [2025-02-05T01:49:48.880Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/fruit-boxers/sites/fruit-boxers 200
+[debug] [2025-02-05T01:49:48.880Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/fruit-boxers/sites/fruit-boxers {"name":"projects/fruit-boxers/sites/fruit-boxers","defaultUrl":"https://fruit-boxers.web.app","appId":"1:987758189493:web:85fbbd91c6f3f9d8dc97fc","type":"DEFAULT_SITE"}
+[debug] [2025-02-05T01:49:53.657Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "us-central1"
+      },
+      "site": "fruit-boxers",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": {
+            "functionId": "ssrfruitboxers",
+            "region": "us-central1",
+            "pinTag": true
+          }
+        }
+      ],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "/favicon.ico",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "image/x-icon"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"
+            }
+          ]
+        },
+        {
+          "source": "/_not-found",
+          "headers": [
+            {
+              "key": "x-nextjs-stale-time",
+              "value": "4294967294"
+            },
+            {
+              "key": "x-nextjs-prerender",
+              "value": "1"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "public": ".firebase/fruit-boxers/hosting",
+      "webFramework": "next_ssr"
+    }
+  ],
+  "functions": [
+    {
+      "source": ".firebase/fruit-boxers/functions",
+      "codebase": "firebase-frameworks-fruit-boxers"
+    }
+  ]
+}
+[debug] [2025-02-05T01:49:53.658Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-05T01:49:53.658Z] > authorizing via signed-in user (jackjrankin@gmail.com)
+[debug] [2025-02-05T01:49:53.658Z] [iam] checking project fruit-boxers for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-02-05T01:49:53.658Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:53.658Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:53.658Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions [none]
+[debug] [2025-02-05T01:49:53.658Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions x-goog-quota-user=projects/fruit-boxers
+[debug] [2025-02-05T01:49:53.658Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-02-05T01:49:53.812Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions 200
+[debug] [2025-02-05T01:49:53.812Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'fruit-boxers'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2025-02-05T01:49:53.814Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:53.815Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:53.815Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers [none]
+[debug] [2025-02-05T01:49:53.925Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers 200
+[debug] [2025-02-05T01:49:53.925Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers {"projectNumber":"987758189493","projectId":"fruit-boxers","lifecycleState":"ACTIVE","name":"fruitboxers","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-02-04T23:36:53.645021Z"}
+[info] i  functions: preparing codebase firebase-frameworks-fruit-boxers for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2025-02-05T01:49:53.926Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:53.927Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:53.927Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:53.927Z] Checked if tokens are valid: true, expires at: 1738723317559
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2025-02-05T01:49:53.927Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:53.927Z] Checked if tokens are valid: true, expires at: 1738723317559
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-02-05T01:49:53.927Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:53.928Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:53.928Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-02-05T01:49:53.928Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/fruit-boxers
+[debug] [2025-02-05T01:49:53.930Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-02-05T01:49:53.930Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/fruit-boxers
+[debug] [2025-02-05T01:49:53.931Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudbuild.googleapis.com [none]
+[debug] [2025-02-05T01:49:53.932Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudbuild.googleapis.com x-goog-quota-user=projects/fruit-boxers
+[debug] [2025-02-05T01:49:53.933Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/artifactregistry.googleapis.com [none]
+[debug] [2025-02-05T01:49:53.933Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/artifactregistry.googleapis.com x-goog-quota-user=projects/fruit-boxers
+[debug] [2025-02-05T01:49:54.207Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/artifactregistry.googleapis.com 200
+[debug] [2025-02-05T01:49:54.207Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/artifactregistry.googleapis.com [omitted]
+[warn] ⚠  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now... 
+[debug] [2025-02-05T01:49:54.208Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:54.208Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:54.208Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/artifactregistry.googleapis.com:enable [none]
+[debug] [2025-02-05T01:49:54.208Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/artifactregistry.googleapis.com:enable x-goog-quota-user=projects/fruit-boxers
+[debug] [2025-02-05T01:49:54.215Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudbuild.googleapis.com 200
+[debug] [2025-02-05T01:49:54.215Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudbuild.googleapis.com [omitted]
+[warn] ⚠  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2025-02-05T01:49:54.215Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:54.215Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:49:54.215Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2025-02-05T01:49:54.216Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudbuild.googleapis.com:enable x-goog-quota-user=projects/fruit-boxers
+[debug] [2025-02-05T01:49:54.321Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/runtimeconfig.googleapis.com 200
+[debug] [2025-02-05T01:49:54.321Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-02-05T01:49:54.324Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudfunctions.googleapis.com 200
+[debug] [2025-02-05T01:49:54.324Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2025-02-05T01:49:54.580Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/artifactregistry.googleapis.com:enable 200
+[debug] [2025-02-05T01:49:54.581Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/artifactregistry.googleapis.com:enable [omitted]
+[debug] [2025-02-05T01:49:54.700Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudbuild.googleapis.com:enable 200
+[debug] [2025-02-05T01:49:54.700Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2025-02-05T01:50:04.584Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:04.585Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:04.585Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/artifactregistry.googleapis.com [none]
+[debug] [2025-02-05T01:50:04.585Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/artifactregistry.googleapis.com x-goog-quota-user=projects/fruit-boxers
+[debug] [2025-02-05T01:50:04.702Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:04.702Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:04.703Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudbuild.googleapis.com [none]
+[debug] [2025-02-05T01:50:04.703Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudbuild.googleapis.com x-goog-quota-user=projects/fruit-boxers
+[debug] [2025-02-05T01:50:04.856Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/artifactregistry.googleapis.com 200
+[debug] [2025-02-05T01:50:04.856Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2025-02-05T01:50:04.961Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudbuild.googleapis.com 200
+[debug] [2025-02-05T01:50:04.961Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2025-02-05T01:50:04.964Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:04.964Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:04.964Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fruit-boxers/adminSdkConfig [none]
+[debug] [2025-02-05T01:50:05.153Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fruit-boxers/adminSdkConfig 200
+[debug] [2025-02-05T01:50:05.153Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fruit-boxers/adminSdkConfig {"projectId":"fruit-boxers","storageBucket":"fruit-boxers.firebasestorage.app"}
+[debug] [2025-02-05T01:50:05.154Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:05.154Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:05.154Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/fruit-boxers/configs [none]
+[debug] [2025-02-05T01:50:05.575Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/fruit-boxers/configs 200
+[debug] [2025-02-05T01:50:05.575Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/fruit-boxers/configs {}
+[debug] [2025-02-05T01:50:05.578Z] Validating nodejs source
+[debug] [2025-02-05T01:50:05.967Z] > [functions] package.json contents: {
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.1.6",
+    "firebase-frameworks": "^0.11.0",
+    "firebase-functions": "^6.0.1",
+    "firebase-admin": "^11.11.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "20"
+  }
+}
+[debug] [2025-02-05T01:50:05.967Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase firebase-frameworks-fruit-boxers to determine what to deploy 
+[debug] [2025-02-05T01:50:05.968Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-02-05T01:50:05.971Z] Found firebase-functions binary at '/Users/jjrankin/projects/fruit_boxers/client/.firebase/fruit-boxers/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8027
+
+[debug] [2025-02-05T01:50:06.239Z] Got response from /__/functions.yaml {"endpoints":{"ssrfruitboxers":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrfruitboxers"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2025-02-05T01:50:11.257Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:11.257Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:11.257Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/firebaseextensions.googleapis.com [none]
+[debug] [2025-02-05T01:50:11.257Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/fruit-boxers
+[debug] [2025-02-05T01:50:11.533Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/firebaseextensions.googleapis.com 200
+[debug] [2025-02-05T01:50:11.533Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/firebaseextensions.googleapis.com [omitted]
+[warn] ⚠  extensions: missing required API firebaseextensions.googleapis.com. Enabling now... 
+[debug] [2025-02-05T01:50:11.533Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:11.533Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:11.534Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/firebaseextensions.googleapis.com:enable [none]
+[debug] [2025-02-05T01:50:11.534Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/firebaseextensions.googleapis.com:enable x-goog-quota-user=projects/fruit-boxers
+[debug] [2025-02-05T01:50:11.888Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/firebaseextensions.googleapis.com:enable 200
+[debug] [2025-02-05T01:50:11.888Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/firebaseextensions.googleapis.com:enable [omitted]
+[debug] [2025-02-05T01:50:21.890Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:21.891Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:21.892Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/firebaseextensions.googleapis.com [none]
+[debug] [2025-02-05T01:50:21.893Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/fruit-boxers
+[debug] [2025-02-05T01:50:22.182Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/firebaseextensions.googleapis.com 200
+[debug] [2025-02-05T01:50:22.183Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fruit-boxers/services/firebaseextensions.googleapis.com [omitted]
+[info] ✔  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2025-02-05T01:50:22.186Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-05T01:50:22.187Z] > authorizing via signed-in user (jackjrankin@gmail.com)
+[debug] [2025-02-05T01:50:22.187Z] [iam] checking project fruit-boxers for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2025-02-05T01:50:22.187Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:22.187Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:22.187Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions [none]
+[debug] [2025-02-05T01:50:22.187Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions x-goog-quota-user=projects/fruit-boxers
+[debug] [2025-02-05T01:50:22.187Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-02-05T01:50:22.333Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions 200
+[debug] [2025-02-05T01:50:22.334Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fruit-boxers:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-02-05T01:50:22.334Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:22.334Z] Checked if tokens are valid: true, expires at: 1738723317559
+[debug] [2025-02-05T01:50:22.335Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/fruit-boxers/instances pageSize=100&pageToken=
+[debug] [2025-02-05T01:50:24.072Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/fruit-boxers/instances 200
+[debug] [2025-02-05T01:50:24.072Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/fruit-boxers/instances {}
+[debug] [2025-02-05T01:50:24.075Z] Failed to validate key FIREBASE_API_KEY: Error: Key FIREBASE_API_KEY starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[debug] [2025-02-05T01:50:24.075Z] Failed to validate key FIREBASE_PROJECT_ID: Error: Key FIREBASE_PROJECT_ID starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[debug] [2025-02-05T01:50:24.075Z] Failed to validate key FIREBASE_STORAGE_BUCKET: Error: Key FIREBASE_STORAGE_BUCKET starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[debug] [2025-02-05T01:50:24.075Z] Failed to validate key FIREBASE_MESSAGING_SENDER_ID: Error: Key FIREBASE_MESSAGING_SENDER_ID starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[debug] [2025-02-05T01:50:24.075Z] Failed to validate key FIREBASE_APP_ID: Error: Key FIREBASE_APP_ID starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[debug] [2025-02-05T01:50:24.075Z] Failed to validate key FIREBASE_MEASUREMENT_ID: Error: Key FIREBASE_MEASUREMENT_ID starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] Error: Failed to load environment variables from .env.:
+[error] - Error Key FIREBASE_API_KEY starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] - Error Key FIREBASE_PROJECT_ID starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] - Error Key FIREBASE_STORAGE_BUCKET starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] - Error Key FIREBASE_MESSAGING_SENDER_ID starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] - Error Key FIREBASE_APP_ID starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] - Error Key FIREBASE_MEASUREMENT_ID starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
