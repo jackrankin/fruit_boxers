@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();
-  const cols = 45;
+  const cols = 60;
   const rows = 14;
   const tileSize = 45;
 

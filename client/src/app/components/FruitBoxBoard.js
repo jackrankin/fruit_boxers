@@ -192,13 +192,15 @@ export default function FruitBoxBoard({ params }) {
         >
           <div className="flex flex-row justify-between mb-8">
             <div className="flex flex-row">
-              <div className="text-2xl font-semibold">{"YOU: " + myScore}</div>
+              <div className="text-2xl font-semibold text-black">
+                {"YOU: " + myScore}
+              </div>
             </div>
-            <div className="flex justify-center text-xl font-semibold">
+            <div className="flex justify-center text-xl font-semibold text-black">
               Time Left: {timer}s
             </div>
             <div className="flex flex-row">
-              <div className="text-2xl font-semibold">
+              <div className="text-2xl font-semibold text-black">
                 {"THEM: " + oppScore}
               </div>
             </div>
