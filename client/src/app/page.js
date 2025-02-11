@@ -136,7 +136,7 @@ export default function Home() {
         )}
       </div>
 
-      <div className="relative bg-gray-100 z-10 px-8 py-6 flex flex-col items-center rounded-lg shadow-lg">
+      <div className="text-black relative bg-gray-100 z-10 px-8 py-6 flex flex-col items-center rounded-lg shadow-lg">
         <header className="text-4xl p-6 text-red-500">🍎 fruitboxers 🍏</header>
         <button
           onClick={() => {
