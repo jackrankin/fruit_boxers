@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import FruitBoxBoard from "../../components/FruitBoxBoard";
 
 export default function GamePage({ params }) {
-  const cols = 60;
-  const rows = 14;
+  const cols = 52;
+  const rows = 11;
   const tileSize = 45;
 
   const { gameId } = useParams();

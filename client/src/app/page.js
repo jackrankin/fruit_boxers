@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const router = useRouter();
   const cols = 60;
-  const rows = 14;
+  const rows = 11;
   const tileSize = 45;
 
   const [isDragging, setIsDragging] = useState(false);
@@ -20,6 +20,7 @@ export default function Home() {
     }
     return initialBoard;
   });
+  const [gameId, setGameId] = useState("");
 
   useEffect(() => {
     const filledBoard = board.map((row) =>
@@ -136,17 +137,30 @@ export default function Home() {
       </div>
 
       <div className="relative bg-gray-100 z-10 px-8 py-6 flex flex-col items-center rounded-lg shadow-lg">
-        <header className="text-4xl p-6 text-red-500">fruitboxers.live</header>
+        <header className="text-4xl p-6 text-red-500">🍎 fruitboxers 🍏</header>
         <button
           onClick={() => {
             const gameId = crypto.randomUUID().substring(0, 5);
-            router.push(`/game/${gameId}`);
+            window.location.href = `/game/${gameId}`;
           }}
-          className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600  hover:scale-105 transition"
+          className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 hover:scale-105 transition"
         >
           challenge someone
         </button>
-        <p className="pt-4 text-sm">
+        <p className="pt-4">or</p>
+        <input
+          type="text"
+          placeholder="Enter game ID"
+          value={gameId}
+          onChange={(e) => setGameId(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && gameId.trim()) {
+              window.location.href = `/game/${gameId.trim()}`;
+            }
+          }}
+          className="mt-4 p-2 border rounded-lg text-center"
+        />
+        <p className="pt-4 text-xs">
           try tracing boxes over apples in the bg that sum to 10!
         </p>
       </div>
